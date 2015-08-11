@@ -1,0 +1,51 @@
+{"error":false,"data":
+  [
+    {"properties":{"name":"PCRa1", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8024"},
+
+    {"properties":{"name":"PCRa2", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8025"},
+
+    {"properties":{"name":"PCRa3", "bookable":"true", "blocksize":"96"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8026"},
+
+    {"properties":{"name":"PCRa4", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8027"},
+
+    {"properties":{"name":"PCRa5", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8028"},
+
+    {"properties":{"name":"PCRa6", "bookable":"true", "blocksize":"96"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8029"},
+
+    {"properties":{"name":"PCRb1", "bookable":"true", "blocksize":"96"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8032"},
+
+    {"properties":{"name":"PCRb2", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8033"},
+
+    {"properties":{"name":"PCRb3", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8034"},
+
+    {"properties":{"name":"PCRb4", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8035"},
+
+    {"properties":{"name":"PCRb5", "bookable":"true", "blocksize":"48"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8036"},
+
+    {"properties":{"name":"PCRb6", "bookable":"true", "blocksize":"96"},
+    "version":"1.0.0",
+    "id":"556f49cf70969dcf017d8037"}
+  ]
+}

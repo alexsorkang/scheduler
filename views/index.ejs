@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>Hotel</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".item").click(function(){
+        $(this).next(".detail").toggle("fast");
+        });
+      });
+  </script>
+  </head>
+
+<body>
+  <h1> Welcome</h1>
+
+  <div class="item">Schedule events</div>
+  <div class="detail" style="color:#93a1a1;">
+    <form action="/addevent" method="post">
+    <fieldset>
+      <br><input type="text" placeholder="Asset ID" name="id"><br><br>
+      <output name="amount1" id="amount1" for="date">Today</output>
+      <input type="range" name="date" style="width:35%" min="0" max="6" value="0" oninput="amount1.value=date.value + ' days from today'"><br>
+      <output name="amount2" id="amount2" for="time">Now</output>
+      <input type="range" name="time" style="width:35%" min="0" max="23" value="0" oninput="amount2.value=time.value + ':00'"><br>
+      <output name="amount3" id="amount3" for="duration">0</output>
+      <input type="range" name="duration" style="width:35%" min="0" max="48" value="0" oninput="amount3.value=duration.value + ' hours'"><br>
+    </fieldset>
+    <input type="submit" value="schedule" /><br><br>
+    </form>
+  </div>
+
+  <div class="item">View or delete events</div>
+  <div class="detail" style="color:#93a1a1;">
+    <ul>
+    <% for (elem in scheduledassets) { %>
+      <% for (views in scheduledassets[elem]) { %>
+        <div>
+        <% if (views === 'assetname') { %>
+          <li><%= views + ': '+ scheduledassets[elem][views] %></li>
+        <% } else { %>
+        <%= views + ': '+ scheduledassets[elem][views] %>
+        <% } %>
+        </div>
+      <% } %>
+      <form action="/delevent" method="post">
+        <fieldset>
+          <input type="hidden" name="entry" value=<%= scheduledassets[elem].eventid %>>
+        </fieldset>
+        <input type="submit" value="delete">
+      </form>
+      <br>
+    <% } %>
+    </ul>
+  </div>
+
+  <div class="item">View list of all assets</div>
+  <div class="detail" style="color:#93a1a1;">
+    <ul>
+    <% for (elem in assets) { %>
+      <li><%= 'asset id: ' + assets[elem].id %></li>
+      <% for (property in assets[elem].properties) { %>
+        <div>
+        <%= property + ': ' + assets[elem].properties[property] %>
+        </div>
+        <% } %>
+    <% } %>
+    </ul>
+  </div>
+
+
+  <script src="/javascripts/myscripts.js"></script>
+</body>
+</html>
